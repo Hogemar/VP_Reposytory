@@ -54,7 +54,7 @@
         private string proposal_title;
         private string proposal_text;
         private DateTime proposal_date;
-        private StatusProposal Proposal_status { StatusProposal.SP.Waiting };
+        private StatusProposal  Proposal_status = StatusProposal.Waiting;
 
         public void viewProposal() { }
         public void viewStatus() { }
@@ -66,7 +66,12 @@
 
     public class Applicant
     {
-
+        private int Applicant_id;
+        private string Applicant_name;
+        private string Applicant_job;
+        private string Applicant_addres;
+        private Gender Applicant_gender;
+        private char[] Applicant_tel = new char[16];
     }
 
     enum RoleUser
@@ -81,24 +86,10 @@
         Male,
         Female
     }
-
-    public class StatusProposal
+    enum StatusProposal
     {
-        StatusProposal() { }
-
-        StatusProposal(SP status) { status_ = status; }
-
-        public enum SP
-        {
-            Waiting,
-            Rejected,
-            Accepted
-        }
-
-        private SP status_;
-
-
-       public void changeStatus() { }
+        Waiting,
+        Rejected,
+        Accepted
     }
-
 }
