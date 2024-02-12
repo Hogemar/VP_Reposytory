@@ -1,0 +1,11 @@
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Lab01\LogicPart\bin\Debug\net8.0\LogicPart.deps.json
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Lab01\LogicPart\bin\Debug\net8.0\LogicPart.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Lab01\LogicPart\bin\Debug\net8.0\LogicPart.pdb
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Lab01\LogicPart\obj\Debug\net8.0\LogicPart.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Lab01\LogicPart\obj\Debug\net8.0\LogicPart.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Lab01\LogicPart\obj\Debug\net8.0\LogicPart.AssemblyInfo.cs
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Lab01\LogicPart\obj\Debug\net8.0\LogicPart.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Lab01\LogicPart\obj\Debug\net8.0\LogicPart.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Lab01\LogicPart\obj\Debug\net8.0\refint\LogicPart.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Lab01\LogicPart\obj\Debug\net8.0\LogicPart.pdb
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Lab01\LogicPart\obj\Debug\net8.0\ref\LogicPart.dll
