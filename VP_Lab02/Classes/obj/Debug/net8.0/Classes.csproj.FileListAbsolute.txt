@@ -1,0 +1,11 @@
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Lab02\Classes\bin\Debug\net8.0\Classes.deps.json
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Lab02\Classes\bin\Debug\net8.0\Classes.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Lab02\Classes\bin\Debug\net8.0\Classes.pdb
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Lab02\Classes\obj\Debug\net8.0\Classes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Lab02\Classes\obj\Debug\net8.0\Classes.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Lab02\Classes\obj\Debug\net8.0\Classes.AssemblyInfo.cs
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Lab02\Classes\obj\Debug\net8.0\Classes.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Lab02\Classes\obj\Debug\net8.0\Classes.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Lab02\Classes\obj\Debug\net8.0\refint\Classes.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Lab02\Classes\obj\Debug\net8.0\Classes.pdb
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Lab02\Classes\obj\Debug\net8.0\ref\Classes.dll
