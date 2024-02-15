@@ -1,0 +1,16 @@
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Group\bin\Debug\net8.0\Group.deps.json
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Group\bin\Debug\net8.0\Group.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Group\bin\Debug\net8.0\Group.pdb
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Group\bin\Debug\net8.0\Student.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Group\bin\Debug\net8.0\Student.pdb
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Group\obj\Debug\net8.0\Group.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Group\obj\Debug\net8.0\Group.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Group\obj\Debug\net8.0\Group.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Group\obj\Debug\net8.0\Group.AssemblyInfo.cs
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Group\obj\Debug\net8.0\Group.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Group\obj\Debug\net8.0\Group.sourcelink.json
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Group\obj\Debug\net8.0\Group.csproj.CopyComplete
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Group\obj\Debug\net8.0\Group.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Group\obj\Debug\net8.0\refint\Group.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Group\obj\Debug\net8.0\Group.pdb
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Group\obj\Debug\net8.0\ref\Group.dll

@@ -16,4 +16,4 @@ group.Add(b);
 
 Student studref = group[16];
 if(studref != null)
-    Console.WriteLine(studref.ToString());
+    Console.WriteLine(group.GetInfo()/*studref.ToString()*/);

@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Classes\bin\Debug\net8.0\Student.deps.json
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Classes\bin\Debug\net8.0\Student.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Classes\bin\Debug\net8.0\Student.pdb
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Classes\obj\Debug\net8.0\Student.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Classes\obj\Debug\net8.0\Student.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Classes\obj\Debug\net8.0\Student.AssemblyInfo.cs
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Classes\obj\Debug\net8.0\Student.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Classes\obj\Debug\net8.0\Student.sourcelink.json
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Classes\obj\Debug\net8.0\Student.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Classes\obj\Debug\net8.0\refint\Student.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Classes\obj\Debug\net8.0\Student.pdb
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab02\Classes\obj\Debug\net8.0\ref\Student.dll

@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Reposytory\\VP_Lab02\\Classes\\Classes.csproj",
-      "projectName": "Classes",
-      "projectPath": "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Reposytory\\VP_Lab02\\Classes\\Classes.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Reposytory\\VP_Lab02\\Classes\\Student.csproj",
+      "projectName": "Student",
+      "projectPath": "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Reposytory\\VP_Lab02\\Classes\\Student.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Reposytory\\VP_Lab02\\Classes\\obj\\",
       "projectStyle": "PackageReference",
