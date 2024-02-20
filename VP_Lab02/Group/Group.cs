@@ -12,19 +12,19 @@
 
         private void Sort()
         {
-            for (int viewedN = 0; viewedN < _students.Count-1; viewedN++)
+            for (int viewedNumber = 0; viewedNumber < _students.Count-1; viewedNumber++)
             {
-                int max_k = viewedN;
+                int maxIndex = viewedNumber;
 
-                for (int i = viewedN+1; i <  _students.Count; i++)
+                for (int i = viewedNumber+1; i <  _students.Count; i++)
                 {
-                    if (_students[i].GetFullName().CompareTo(_students[max_k].GetFullName()) < 0)
-                        max_k = i;
+                    if (_students[i].GetFullName().CompareTo(_students[maxIndex].GetFullName()) < 0)
+                        maxIndex = i;
                 }
 
-                Student studref = _students[viewedN];
-                _students[viewedN] = _students[max_k];
-                _students[max_k] = studref;
+                Student studRef = _students[viewedNumber];
+                _students[viewedNumber] = _students[maxIndex];
+                _students[maxIndex] = studRef;
             }
         }
 
@@ -33,7 +33,7 @@
             _students.Add(student);
             Sort();
         }
-        public void Add(int id, string name, string surname, DateOnly birthDate, string address, char[] phoneNumber, string middleName = null)
+        public void Add(int id, string name, string surname, DateOnly birthDate, string address, string phoneNumber, string middleName = null)
         {
             _students.Add(new Student(id, name, surname, birthDate, address, phoneNumber, middleName));
             Sort();

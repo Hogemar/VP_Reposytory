@@ -2,35 +2,23 @@
 {
     public class Student
     {
-        public int Id { get; }              // Номер зачётной книжки
-        public string Name { get; }         // Имя
-        public string Surname { get; }      // Фамилия
-        public string MiddleName { get; }   // Отчество
-        public DateOnly BirthDate { get; }  // Дата рождения
-        public string address;              // Адрес
-        public char[] phoneNumber;          // Номер телефона
+        public int Id { get; }                  // Номер зачётной книжки
+        public string Name { get; }             // Имя
+        public string Surname { get; }          // Фамилия
+        public string? MiddleName { get; }      // Отчество
+        public DateOnly BirthDate { get; }      // Дата рождения
+        public string Address { get; set; }     // Адрес
+        public string PhoneNumber { get; set; } // Номер телефона
 
-        //public Student(int id)
-        //{
-        //    _id = id;
-        //}
-        //public Student(int id, string name, string surname, string middleName, DateOnly birthDate)
-        //{
-        //    _id = id;
-        //    Name=name;
-        //    Surname=surname;
-        //    MiddleName=middleName;
-        //    BirthDate=birthDate;
-        //}
-        public Student(int id, string name, string surname, DateOnly birthDate, string address, char[] phoneNumber, string middleName = null)
+        public Student(int id, string name, string surname, DateOnly birthDate, string address, string phoneNumber, string middleName)
         {
-            Id=id;
-            Name=name;
-            Surname=surname;
-            MiddleName=middleName;
-            BirthDate=birthDate;
-            this.address=address;
-            this.phoneNumber=phoneNumber;
+            Id = id;
+            Name = name;
+            Surname = surname;
+            MiddleName = middleName;
+            BirthDate = birthDate;
+            Address = address;
+            PhoneNumber = phoneNumber;
         }
 
         public string GetFullName()
@@ -60,15 +48,10 @@
 
             str +=
                 $"Дата рождения: {BirthDate}\n" +
-                $"Адрес: {address}\n";
-
-            string phoneStr = new string("");
-            foreach(var c in phoneNumber)
-            {
-                phoneStr += c ;
-            }
-            
-            str+= $"Телефон: {phoneStr}\n";
+                $"Адрес: {Address}\n";
+                 
+            str +=
+                $"Телефон: {PhoneNumber}\n";
 
             return str;
         }
@@ -78,7 +61,15 @@
             if (obj == null) return false;
             if (obj == this) return true;
 
-            return (this.ToString().Equals(obj.ToString()));
+            Student studentObject = obj as Student;
+
+            return this.Id == studentObject.Id
+                && this.Name == studentObject.Name
+                && this.Surname == studentObject.Surname
+                && this.BirthDate == studentObject.BirthDate
+                && this.Address == studentObject.Address
+                && this.PhoneNumber == studentObject.PhoneNumber
+                && this.MiddleName == studentObject.MiddleName;
         }
 
     }
