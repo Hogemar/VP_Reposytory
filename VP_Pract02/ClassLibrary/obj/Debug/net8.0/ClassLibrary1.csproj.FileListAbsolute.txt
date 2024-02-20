@@ -1,0 +1,4 @@
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract02\ClassLibrary\obj\Debug\net8.0\ClassLibrary1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract02\ClassLibrary\obj\Debug\net8.0\ClassLibrary1.AssemblyInfoInputs.cache
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract02\ClassLibrary\obj\Debug\net8.0\ClassLibrary1.AssemblyInfo.cs
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract02\ClassLibrary\obj\Debug\net8.0\ClassLibrary1.csproj.CoreCompileInputs.cache

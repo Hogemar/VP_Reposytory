@@ -1,0 +1,37 @@
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract02\User\bin\Debug\net8.0\User.exe
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract02\User\bin\Debug\net8.0\User.deps.json
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract02\User\bin\Debug\net8.0\User.runtimeconfig.json
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract02\User\bin\Debug\net8.0\User.dll
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract02\User\bin\Debug\net8.0\User.pdb
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract02\User\obj\Debug\net8.0\User.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract02\User\obj\Debug\net8.0\User.AssemblyInfoInputs.cache
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract02\User\obj\Debug\net8.0\User.AssemblyInfo.cs
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract02\User\obj\Debug\net8.0\User.csproj.CoreCompileInputs.cache
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract02\User\obj\Debug\net8.0\User.dll
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract02\User\obj\Debug\net8.0\refint\User.dll
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract02\User\obj\Debug\net8.0\User.pdb
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract02\User\obj\Debug\net8.0\User.genruntimeconfig.cache
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract02\User\obj\Debug\net8.0\ref\User.dll
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract02\User\bin\Debug\net8.0\ClassLibrary.dll
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract02\User\bin\Debug\net8.0\ClassLibrary.pdb
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract02\User\obj\Debug\net8.0\User.csproj.AssemblyReference.cache
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract02\User\obj\Debug\net8.0\User.csproj.CopyComplete
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract02\User\bin\Debug\net8.0\User.exe
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract02\User\bin\Debug\net8.0\User.deps.json
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract02\User\bin\Debug\net8.0\User.runtimeconfig.json
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract02\User\bin\Debug\net8.0\User.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract02\User\bin\Debug\net8.0\User.pdb
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract02\User\bin\Debug\net8.0\ClassLibrary.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract02\User\bin\Debug\net8.0\ClassLibrary.pdb
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract02\User\obj\Debug\net8.0\User.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract02\User\obj\Debug\net8.0\User.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract02\User\obj\Debug\net8.0\User.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract02\User\obj\Debug\net8.0\User.AssemblyInfo.cs
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract02\User\obj\Debug\net8.0\User.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract02\User\obj\Debug\net8.0\User.sourcelink.json
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract02\User\obj\Debug\net8.0\User.csproj.CopyComplete
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract02\User\obj\Debug\net8.0\User.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract02\User\obj\Debug\net8.0\refint\User.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract02\User\obj\Debug\net8.0\User.pdb
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract02\User\obj\Debug\net8.0\User.genruntimeconfig.cache
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract02\User\obj\Debug\net8.0\ref\User.dll
