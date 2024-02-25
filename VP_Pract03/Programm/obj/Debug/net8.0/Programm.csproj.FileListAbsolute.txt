@@ -1,0 +1,36 @@
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract03\Programm\obj\Debug\net8.0\Programm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract03\Programm\obj\Debug\net8.0\Programm.AssemblyInfoInputs.cache
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract03\Programm\obj\Debug\net8.0\Programm.AssemblyInfo.cs
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract03\Programm\obj\Debug\net8.0\Programm.csproj.CoreCompileInputs.cache
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract03\Programm\bin\Debug\net8.0\Programm.exe
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract03\Programm\bin\Debug\net8.0\Programm.deps.json
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract03\Programm\bin\Debug\net8.0\Programm.runtimeconfig.json
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract03\Programm\bin\Debug\net8.0\Programm.dll
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract03\Programm\bin\Debug\net8.0\Programm.pdb
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract03\Programm\bin\Debug\net8.0\ClassLibrary.dll
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract03\Programm\bin\Debug\net8.0\ClassLibrary.pdb
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract03\Programm\obj\Debug\net8.0\Programm.csproj.AssemblyReference.cache
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract03\Programm\obj\Debug\net8.0\Programm.csproj.CopyComplete
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract03\Programm\obj\Debug\net8.0\Programm.dll
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract03\Programm\obj\Debug\net8.0\refint\Programm.dll
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract03\Programm\obj\Debug\net8.0\Programm.pdb
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract03\Programm\obj\Debug\net8.0\Programm.genruntimeconfig.cache
+C:\Users\user3\OneDrive\Рабочий стол\Визуал прог\ПЗ\VP_Pract03\Programm\obj\Debug\net8.0\ref\Programm.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Pract03\Programm\bin\Debug\net8.0\Programm.exe
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Pract03\Programm\bin\Debug\net8.0\Programm.deps.json
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Pract03\Programm\bin\Debug\net8.0\Programm.runtimeconfig.json
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Pract03\Programm\bin\Debug\net8.0\Programm.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Pract03\Programm\bin\Debug\net8.0\Programm.pdb
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Pract03\Programm\bin\Debug\net8.0\ClassLibrary.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Pract03\Programm\bin\Debug\net8.0\ClassLibrary.pdb
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Pract03\Programm\obj\Debug\net8.0\Programm.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Pract03\Programm\obj\Debug\net8.0\Programm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Pract03\Programm\obj\Debug\net8.0\Programm.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Pract03\Programm\obj\Debug\net8.0\Programm.AssemblyInfo.cs
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Pract03\Programm\obj\Debug\net8.0\Programm.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Pract03\Programm\obj\Debug\net8.0\Programm.csproj.CopyComplete
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Pract03\Programm\obj\Debug\net8.0\Programm.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Pract03\Programm\obj\Debug\net8.0\refint\Programm.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Pract03\Programm\obj\Debug\net8.0\Programm.pdb
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Pract03\Programm\obj\Debug\net8.0\Programm.genruntimeconfig.cache
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Pract03\Programm\obj\Debug\net8.0\ref\Programm.dll
