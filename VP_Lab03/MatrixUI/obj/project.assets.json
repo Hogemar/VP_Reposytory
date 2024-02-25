@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "Matrix/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Matrix.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Matrix.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Matrix/1.0.0": {
+      "type": "project",
+      "path": "../Matrix/Matrix.csproj",
+      "msbuildProject": "../Matrix/Matrix.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "Matrix >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\User\\.nuget\\packages\\": {},
@@ -39,7 +58,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Reposytory\\VP_Lab03\\Matrix\\Matrix.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Reposytory\\VP_Lab03\\Matrix\\Matrix.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

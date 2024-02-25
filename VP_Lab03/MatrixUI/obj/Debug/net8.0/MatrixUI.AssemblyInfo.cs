@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MatrixUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a576b1e6bfc7fd74776333d4e3429010b2beb237")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a904232412f4eed48b9f30b64e975ba7f2dbe09")]
 [assembly: System.Reflection.AssemblyProductAttribute("MatrixUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MatrixUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
