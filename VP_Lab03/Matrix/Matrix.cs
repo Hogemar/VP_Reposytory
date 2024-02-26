@@ -2,7 +2,7 @@
 
 namespace MatrixLib
 {
-    public class Matrix
+    public class Matrix : ICloneable, IComparable
     {
         private double[,] _elements; // Массив значений
         public uint Rows { get; private set; } // Количество строк
@@ -31,7 +31,7 @@ namespace MatrixLib
 
             for (int i = 0; i < Rows; i++)
                 for (int j = 0; j < Columns; j++)
-                    _elements[i, j] = matrix._elements[i,j];
+                    _elements[i, j] = matrix._elements[i, j];
         }
 
         // Индексатор доступа к элементам
@@ -49,15 +49,15 @@ namespace MatrixLib
                 if (row < 0 || row >= Rows) throw new Exception("set: 'row' argument out of range!");
                 if (column < 0 || column >= Columns) throw new Exception("set: 'column' argument out of range!");
 
-               _elements[row, column] = value;
+                _elements[row, column] = value;
             }
         }
 
         // Возврат строки с количеством строк, столбцов и элементов
         public override string ToString()
         {
-            return $" Матрица:" +
-                $"\nКоличество строк: {Rows}" +
+            return
+                $"Количество строк: {Rows}" +
                 $"\nКоличество столбцов: {Columns}" +
                 $"\nКоличество элементов: {Rows*Columns}";
         }
@@ -115,12 +115,91 @@ namespace MatrixLib
                     double c = 0;
 
                     for (uint k = 0; k < right.Rows; k++)
-                        c += left[i,k] * right[k, j];
+                        c += left[i, k] * right[k, j];
 
                     result[i, j] = c;
                 }
 
             return result;
+        }
+
+        // Реализация метода Clone интерфейса ICloneable
+        public object Clone()
+        {
+            return new Matrix(this);
+        }
+
+        // Реализация метода CompareTo интерфейса ICompareable
+        // Возвращает:
+        // 0 – Матрицы равны или это один объект
+        // 1 – Матрицы равных размеров, сумма вызывающей матрицы больше
+        // -1 – Матрицы равных размеров, сумма вызывающей матрицы меньше
+        // 2 – Вызывающая матрица больше по размерам
+        // -2 – Вызывающая матрица меньше по размерам
+        public int CompareTo(object? obj)
+        {
+            if (obj == null) throw new Exception("CompareTo: object is null!");
+            if (obj == this) return 0;
+
+            Matrix matrixObject = obj as Matrix;
+
+            if (this.Rows != matrixObject.Rows || this.Columns != matrixObject.Columns)
+                return (this.Rows * this.Columns > matrixObject.Rows * matrixObject.Columns) ? 2 : -2;
+
+            bool unequalSum = false;
+
+            for (uint i = 0; i < Rows && !unequalSum; i++)
+                for (uint j = 0; j < Columns && !unequalSum; j++)
+                    if (this._elements[i, j] != matrixObject._elements[i, j]) unequalSum = true;
+
+            if (unequalSum)
+            {
+                double sumMain = 0, sumObj = 0;
+
+                foreach (var element in this._elements)
+                    sumMain += element;
+                foreach (var element in matrixObject._elements)
+                    sumObj += element;
+
+                return (sumMain > sumObj) ? 1 : -1;
+            }
+
+
+            return 0;
+        }
+
+        // Вывод матрицы в консоль
+        public void Print()
+        {
+            Console.Write(' ');
+            for (int j = 0; j < Columns; j++)
+                for (int i = 0; i < 7; i++)
+                    Console.Write("_");
+            Console.WriteLine();
+            for (int i = 0; i < (Rows); i++)
+            {
+                Console.WriteLine();
+                for (int j = 0; j < Columns; j++)
+                {
+                    Console.Write("| ");
+                    Console.Write("{0:F2}", Math.Round(_elements[i, j],2).ToString().PadLeft(5));
+                }
+                Console.WriteLine("|");
+                Console.Write(' ');
+                for (int j = 0; j < Columns; j++)
+                    for (int k = 0; k < 7; k++)
+                        Console.Write("_");
+                Console.WriteLine();
+            }
+        }
+
+        // Заполнение матрицы случайными числами
+        public void Rand()
+        {
+            Random rnd = new Random();
+            for (int i = 0; i < Rows; i++)
+                for (int j = 0; j < (Columns); j++)
+                    _elements[i, j] = Math.Round(rnd.Next(0, 51) * Math.Pow(-1, rnd.Next(1, 3)) * 0.4856, 3);
         }
     }
 }
