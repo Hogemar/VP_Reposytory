@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab03\Matrix\bin\Debug\net8.0\Matrix.deps.json
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab03\Matrix\bin\Debug\net8.0\Matrix.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab03\Matrix\bin\Debug\net8.0\Matrix.pdb
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab03\Matrix\obj\Debug\net8.0\Matrix.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab03\Matrix\obj\Debug\net8.0\Matrix.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab03\Matrix\obj\Debug\net8.0\Matrix.AssemblyInfo.cs
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab03\Matrix\obj\Debug\net8.0\Matrix.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab03\Matrix\obj\Debug\net8.0\Matrix.sourcelink.json
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab03\Matrix\obj\Debug\net8.0\Matrix.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab03\Matrix\obj\Debug\net8.0\refint\Matrix.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab03\Matrix\obj\Debug\net8.0\Matrix.pdb
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Lab03\Matrix\obj\Debug\net8.0\ref\Matrix.dll

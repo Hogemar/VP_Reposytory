@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixUI", "MatrixUI\MatrixUI.csproj", "{EB2B508C-B327-4888-A3A3-FD67EBE0A5D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matrix", "Matrix\Matrix.csproj", "{961C0103-DB48-41E1-B0AF-46D4E7C58D65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB2B508C-B327-4888-A3A3-FD67EBE0A5D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB2B508C-B327-4888-A3A3-FD67EBE0A5D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB2B508C-B327-4888-A3A3-FD67EBE0A5D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB2B508C-B327-4888-A3A3-FD67EBE0A5D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{961C0103-DB48-41E1-B0AF-46D4E7C58D65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{961C0103-DB48-41E1-B0AF-46D4E7C58D65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{961C0103-DB48-41E1-B0AF-46D4E7C58D65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{961C0103-DB48-41E1-B0AF-46D4E7C58D65}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {778F2F49-B07B-4AF1-BEC8-B9F754E59A2E}
+	EndGlobalSection
+EndGlobal
