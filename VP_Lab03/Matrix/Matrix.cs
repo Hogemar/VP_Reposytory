@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Drawing;
+using System.Text;
 
 namespace MatrixLib
 {
@@ -15,10 +16,6 @@ namespace MatrixLib
             this.Columns = columns;
 
             _elements = new double[Rows, Columns];
-
-            for (int i = 0; i < Rows; i++)
-                for (int j = 0; j < Columns; j++)
-                    _elements[i, j] = 0;
         }
 
         // Конструктор копирования
@@ -201,5 +198,24 @@ namespace MatrixLib
                 for (int j = 0; j < (Columns); j++)
                     _elements[i, j] = Math.Round(rnd.Next(0, 51) * Math.Pow(-1, rnd.Next(1, 3)) * 0.4856, 3);
         }
+
+        public static bool operator ==(Matrix left, Matrix right)
+        {
+            //Проверка одноразмерности
+            if (left.Rows != right.Rows || left.Columns != right.Columns)
+                throw new Exception("operator==: matrices must have equal dimensions!");
+
+            for (int i = 0; i < left.Rows; i++) 
+                for (int j = 0; j < left.Columns; j++)
+                    if (left._elements[i,j] != right._elements[i,j]) return false; //Проверка равенства элементов
+
+            return true;
+        }
+
+        public static bool operator !=(Matrix left, Matrix right)
+        {
+            return !(left == right);
+        }
+        //реализовать операторы == и !=
     }
 }

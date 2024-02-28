@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-    public static class GroupExtension
-    {
-        public static uint StudentsNumber(this Group group)
-        {
-            return Convert.ToUInt32(Regex.Matches(group.GetInfo(), "Зачётная книжка:").Count);
-        }
-    }
+	public static class GroupExtension
+	{
+		public static uint GetStudentsNumber(this Group group)
+		{
+			return Convert.ToUInt32(Regex.Matches(group.GetInfo(), "Зачётная книжка:").Count);
+		}
+	}
 }

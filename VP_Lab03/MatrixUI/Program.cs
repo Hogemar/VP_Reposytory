@@ -14,6 +14,9 @@
 
 using MatrixLib;
 
+/*
+Matrix a = new Matrix(2, 2);
+Matrix b = a;
 
 Matrix mtr1 = new Matrix(3, 1);
 mtr1[0, 0] = 5;
@@ -36,9 +39,9 @@ Matrix mulMtr = mtr1*mtr2;
 
 Console.WriteLine("\n Произведение матриц:");
 mulMtr.Print();
+*/
 
 
-/*
 Matrix mtr1 = new Matrix(2, 2);
 mtr1.Rand();
 Matrix mtr2 = mtr1.Clone() as Matrix; //new Matrix(mtr1);
@@ -59,7 +62,7 @@ Console.WriteLine("\n Матрица 3:");
 mtr3.Print();
 
 Console.WriteLine("\n Сравнение матриц:\n");
-if (mtr1.CompareTo(mtr2) == 0)
+if (mtr1 == mtr2/*mtr1.CompareTo(mtr2) == 0*/)
     Console.WriteLine("Матрица 1 равна матрице 2");
 else
     Console.WriteLine("Матрица 1 не равна матрице 2");
@@ -68,7 +71,7 @@ if (mtr1.CompareTo(mtr3) == 0)
     Console.WriteLine("Матрица 1 равна матрице 3");
 else
     Console.WriteLine("Матрица 1 не равна матрице 3");
-*/
+
 
 
 

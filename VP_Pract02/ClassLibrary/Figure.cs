@@ -9,8 +9,7 @@
 
         public override string ToString()
         {
-            string str = $"Фигура {Name}. Цвет {Color}. Периметр {Perimeter}. Площадь {Square}.\n";
-            return str;
+            return $"Фигура {Name}. Цвет {Color}. Периметр {Perimeter}. Площадь {Square}.\n";
         }
 
        public Figure(string name = "", string color = "")

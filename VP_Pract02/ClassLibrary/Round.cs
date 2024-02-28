@@ -8,7 +8,19 @@ namespace ClassLibrary
 {
     public class Round : Figure
     {
-        public double Radius { get; private set; }
+        private double _radius;
+        public double Radius 
+        {
+            get
+            {
+                return _radius;
+            }
+            private set
+            {
+                if (value <= 0) throw new Exception("Raduis must be positive number!");
+                else _radius = value;
+            }
+        }
 
         public Round(string name = "", string color = "", double radius = 1) : base(name, color)
         {

@@ -1,7 +1,7 @@
 ﻿
 using ClassLibrary;
 
-string inputString = "Hello, World!";
+string inputString = "Hello, World!1";
 StringInfo stringInfo = inputString.GetInfo();
 
 Console.WriteLine($"Length: {stringInfo.Length}");
@@ -21,4 +21,4 @@ group.Add(a);
 group.Add(c);
 group.Add(b);
 
-Console.WriteLine(group.StudentsNumber());
+Console.WriteLine($"\nNumber of Students: {group.GetStudentsNumber()}");

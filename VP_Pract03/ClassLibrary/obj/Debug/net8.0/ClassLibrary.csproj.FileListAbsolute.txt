@@ -20,3 +20,15 @@ C:\Users\User\Desktop\labs\Визуальное программирование
 C:\Users\User\Desktop\labs\Визуальное программирование\VP_Pract03\ClassLibrary\obj\Debug\net8.0\refint\ClassLibrary.dll
 C:\Users\User\Desktop\labs\Визуальное программирование\VP_Pract03\ClassLibrary\obj\Debug\net8.0\ClassLibrary.pdb
 C:\Users\User\Desktop\labs\Визуальное программирование\VP_Pract03\ClassLibrary\obj\Debug\net8.0\ref\ClassLibrary.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract03\ClassLibrary\bin\Debug\net8.0\ClassLibrary.deps.json
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract03\ClassLibrary\bin\Debug\net8.0\ClassLibrary.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract03\ClassLibrary\bin\Debug\net8.0\ClassLibrary.pdb
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract03\ClassLibrary\obj\Debug\net8.0\ClassLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract03\ClassLibrary\obj\Debug\net8.0\ClassLibrary.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract03\ClassLibrary\obj\Debug\net8.0\ClassLibrary.AssemblyInfo.cs
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract03\ClassLibrary\obj\Debug\net8.0\ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract03\ClassLibrary\obj\Debug\net8.0\ClassLibrary.sourcelink.json
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract03\ClassLibrary\obj\Debug\net8.0\ClassLibrary.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract03\ClassLibrary\obj\Debug\net8.0\refint\ClassLibrary.dll
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract03\ClassLibrary\obj\Debug\net8.0\ClassLibrary.pdb
+C:\Users\User\Desktop\labs\Визуальное программирование\VP_Reposytory\VP_Pract03\ClassLibrary\obj\Debug\net8.0\ref\ClassLibrary.dll

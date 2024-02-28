@@ -8,9 +8,44 @@ namespace ClassLibrary
 {
     public class Parallelogramm : Figure
     {
-        public double Side1 { get; private set; }
-        public double Side2 { get; private set; }
-        public double Angle { get; private set; }
+        private double _side1, _side2, _angle;
+        public double Side1 
+        { 
+            get
+            {
+                return _side1;
+            }
+            private set
+            {
+                if (value <= 0) throw new Exception("Side must be positive number!");
+                else _side1 = value;
+            }
+        }
+        public double Side2
+        {
+            get
+            {
+                return _side2;
+            }
+            private set
+            {
+                if (value <= 0) throw new Exception("Side must be positive number!");
+                else _side2 = value;
+            }
+        }
+        public double Angle
+        {
+            get
+            {
+                return _angle;
+            }
+            private set
+            {
+                if (value <= 0) throw new Exception("Angle must be positive number!");
+                else _angle = value;
+            }
+        }
+
 
         public Parallelogramm(string name = "", string color = "", double side1 = 1, double side2 = 1, double angle = 90) : base(name, color)
         {

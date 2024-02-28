@@ -8,7 +8,20 @@ namespace ClassLibrary
 {
     public class RegularnPolygon : Figure
     {
-        public double SideLenght { get; private set; }
+        private double _sideLenght;
+        public double SideLenght
+        {
+            get
+            {
+                return _sideLenght;
+            }
+            private set
+            {
+                if (value <= 0) throw new Exception("Side lenght must be positive number!");
+                else _sideLenght = value;
+            }
+        }
+
         public uint SideCount { get; private set; }
 
         public RegularnPolygon(string name = "", string color = "", double sideLenght = 1, uint sideCount = 3) : base(name, color)
@@ -29,7 +42,7 @@ namespace ClassLibrary
         {
             get
             {
-                return SideCount/4 * SideLenght * SideLenght * Math.Tan(Math.PI/SideCount);
+                return SideCount/4.0 * SideLenght * SideLenght * Math.Tan(Math.PI/SideCount);
             }
         }
     }
