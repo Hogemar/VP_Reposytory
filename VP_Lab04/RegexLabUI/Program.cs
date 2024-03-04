@@ -10,9 +10,9 @@ Console.WriteLine($"{postcodes}\n\nЧисло почтовых индексов 
 #region 2
 Console.WriteLine("\t--- Задание 2 ---\n\n");
 
-string sentence = "Как только солнце заходит за горизонт," +
-    " начинается магия вечера - природа окутывается таинственным полумраком," +
-    " а небо наполняется мерцающими звездами:" +
+string sentence = "Как только солнце заходит за горизонт,\n" +
+    " начинается магия вечера - природа окутывается таинственным полумраком,\n" +
+    " а небо наполняется мерцающими звездами:\n" +
     " это время, когда сердце наполняется умиротворением и вдохновением.";
 
 Console.WriteLine($"{sentence}\n\n{sentence.WordToDorw()}\n\n");
@@ -38,9 +38,9 @@ Console.WriteLine("\t--- Задание 5 ---\n\n");
 
 // Здесь 9 адресов и один неправильный
 string textWithAdresses = 
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at 192.168.1.1, ante." +
-    " Nulla facilisi. Integer nec 10.20.30.40 justo. Fusce 172.16.0.1 ac mauris auctor, 8.8.8.8 in commodo nisl." +
-    " Etiam tincidunt 255.255.255.0; turpis vel semper. Duis 123.45.67.89 vitae velit at 192.0.2.1 congue." +
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at 192.168.1.1, ante.\n" +
+    " Nulla facilisi. Integer nec 10.20.30.40 justo. Fusce 172.16.0.1 ac mauris auctor, 8.8.8.8 in commodo nisl.\n" +
+    " Etiam tincidunt 255.255.255.0; turpis vel semper. Duis 123.45.67.89 vitae velit at 192.0.2.1 congue.\n" +
     " Phasellus 100.200.300.400 eget mauris id 172.31.255.254 dictum. Sed 1.2.3.4 vel turpis";
 
 Console.WriteLine($"{textWithAdresses}\n\n{textWithAdresses.GetIPv4Adresses("\n")}\n\n");

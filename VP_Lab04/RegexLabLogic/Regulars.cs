@@ -40,6 +40,7 @@ namespace RegexLabLogic
 		{
 			// Регулярное выражение для телефонов
 			string phonePattern = @"\+7 ((\(\d{3}\) \d{3})|(\(\d{4}\) \d{2})|(\(\d{5}\) \d{1}))-\d{2}-\d{2}";
+
             // Строка со скрытыми номерами
             StringBuilder hiddenSB = new(str); 
 			// Количество номеров
@@ -92,9 +93,7 @@ namespace RegexLabLogic
 
             var adresses = Regex.Matches(str, adressPatern).ToArray();
             foreach (var adress in adresses)
-            {
                 adressesSB.Append(adress.Value + separator);
-            }
 
             return adressesSB.ToString();
         }
