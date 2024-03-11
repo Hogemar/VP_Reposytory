@@ -16,11 +16,11 @@ using System.Text;
 //string str = "КОТ - РЫЖИЙ  ОБОРМОТ     ПОСТРОИЛ ДОМ НА ДЕРЕВЕ   И ЛЕНИВО      ЛОВИТ  МЫШЕЙ, БЕГАЮЩИХ  ПО ПОЛУ.";
 //Console.WriteLine(str.SortString());
 
-/*StringBuilder №1*/
-//StringBuilder sb = new StringBuilder("Привет 11");
+///*StringBuilder №1*/
+//string orig = "Привет 11";
 //char c = '1';
 //string str = "пока";
-//Console.WriteLine(sb.AppString(c, str));
+//Console.WriteLine(orig.AppString(c, str));
 
 /*StringBuilder №2*/
 
@@ -30,5 +30,5 @@ using System.Text;
 //Console.WriteLine($"{str1}+\n{str2}+");
 
 /*StringBuilder №3*/
-//string numstr = "11";
-//Console.WriteLine(numstr.DecToBin());
+string numstr = "11";
+Console.WriteLine(numstr.DecToBin());

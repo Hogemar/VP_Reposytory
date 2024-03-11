@@ -13,8 +13,8 @@ namespace ClassLibrary
         public static string NormalizeSpaces (this string input)
         {
             
-            string result = string.Join(" ",input.Split(new char[] {' '},StringSplitOptions.RemoveEmptyEntries));
-            return result;
+            return string.Join(" ",input.Split(new char[] {' '},StringSplitOptions.RemoveEmptyEntries));
+            //return result;
         }
 
         public static string SortString(this string input)
