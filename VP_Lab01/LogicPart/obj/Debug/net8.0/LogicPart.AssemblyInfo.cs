@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LogicPart")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5fd8004248a67ceb2efcfce22c07affca8593c27")]
 [assembly: System.Reflection.AssemblyProductAttribute("LogicPart")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LogicPart")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

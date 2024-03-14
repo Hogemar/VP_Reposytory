@@ -1,4 +1,4 @@
-﻿#define Фигуры
+﻿//#define Фигуры
 
 using ClassLibrary;
 

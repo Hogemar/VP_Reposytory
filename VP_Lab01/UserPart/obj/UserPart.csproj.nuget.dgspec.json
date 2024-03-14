@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Lab01\\UserPart\\UserPart.csproj": {}
+    "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Reposytory\\VP_Lab01\\UserPart\\UserPart.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Lab01\\LogicPart\\LogicPart.csproj": {
+    "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Reposytory\\VP_Lab01\\LogicPart\\LogicPart.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Lab01\\LogicPart\\LogicPart.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Reposytory\\VP_Lab01\\LogicPart\\LogicPart.csproj",
         "projectName": "LogicPart",
-        "projectPath": "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Lab01\\LogicPart\\LogicPart.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Reposytory\\VP_Lab01\\LogicPart\\LogicPart.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Lab01\\LogicPart\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Reposytory\\VP_Lab01\\LogicPart\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -39,6 +39,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -60,18 +65,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Lab01\\UserPart\\UserPart.csproj": {
+    "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Reposytory\\VP_Lab01\\UserPart\\UserPart.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Lab01\\UserPart\\UserPart.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Reposytory\\VP_Lab01\\UserPart\\UserPart.csproj",
         "projectName": "UserPart",
-        "projectPath": "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Lab01\\UserPart\\UserPart.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Reposytory\\VP_Lab01\\UserPart\\UserPart.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Lab01\\UserPart\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Reposytory\\VP_Lab01\\UserPart\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -93,8 +98,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Lab01\\LogicPart\\LogicPart.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Lab01\\LogicPart\\LogicPart.csproj"
+              "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Reposytory\\VP_Lab01\\LogicPart\\LogicPart.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Reposytory\\VP_Lab01\\LogicPart\\LogicPart.csproj"
               }
             }
           }
@@ -103,6 +108,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -124,7 +134,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

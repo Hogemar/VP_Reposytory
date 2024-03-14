@@ -42,11 +42,17 @@ namespace RegexLabLogic
 		// Скрывает городскую часть номера со второй цифры
 		public static string HidePhonePart(this string str)
 		{
-			// Регулярное выражение для телефонов
-			string phonePattern = @"(\+7 ((?:\(\d{3}\) \d{2})|(?:\(\d{4}\) \d{1})|(?:\(\d{5}\) )))(\d{1}-\d{2}-\d{2}\b)";//@"(\+7 ((\(\d{3}\) \d{3})|(\(\d{4}\) \d{2})|(\(\d{5}\) \d{1})))(-\d{2}-\d{2})";
-            string hiddenPattern = @"$1$2-xx-xx";
-			
-			/*
+			string hidden = str;
+            hidden = Regex.Replace(hidden, @"(\+7 \(\d{3}\) \d{1})(\d{2}-\d{2}-\d{2})", @"$1xx-xx-xx");
+            hidden = Regex.Replace(hidden, @"(\+7 \(\d{4}\) \d{1})(\d{1}-\d{2}-\d{2})", @"$1x-xx-xx");
+            hidden = Regex.Replace(hidden, @"(\+7 \(\d{5}\) \d{1})(-\d{2}-\d{2})", @"$1-xx-xx");
+            return hidden;
+
+            // Регулярное выражение для телефонов
+            //string phonePattern = @"(\+7 ((?:\(\d{3}\) \d{2})|(?:\(\d{4}\) \d{1})|(?:\(\d{5}\) )))(\d{1}-\d{2}-\d{2}\b)";//@"(\+7 ((\(\d{3}\) \d{3})|(\(\d{4}\) \d{2})|(\(\d{5}\) \d{1})))(-\d{2}-\d{2})";
+            //         string hiddenPattern = @"$1$2-xx-xx";
+
+            /*
             // Строка со скрытыми номерами
             StringBuilder hiddenSB = new(str); 
 			// Количество номеров
@@ -72,11 +78,11 @@ namespace RegexLabLogic
 			return hiddenSB.ToString();
 			*/
 
-			return Regex.Replace(str, phonePattern, hiddenPattern);
-		}
+            //return Regex.Replace(str, phonePattern, hiddenPattern);
+        }
 
-		// Возвращает входящие в строку автономера в виде последовательности с раделителем ';'
-		public static string GetLicensePlates(this string str)
+        // Возвращает входящие в строку автономера в виде последовательности с раделителем ';'
+        public static string GetLicensePlates(this string str)
 		{
 			// Регулярное выражение для автономеров
 			string platePattern = @"(([АВЕКМНОРСТУХ]{2} \d{3,4})|([АВЕКМНОРСТУХ]{2} \d{3,4} [АВЕКМНОРСТУХ]{1})|([АВЕКМНОРСТУХ]{2} \d{2} [АВЕКМНОРСТУХ]{2})|([АВЕКМНОРСТУХ]{1} ((\d{3} [АВЕКМНОРСТУХ]{2})|(\d{4} )))|(\d{3,4} [АВЕКМНОРСТУХ]{1,2})) \d{2,4}";
@@ -107,6 +113,20 @@ namespace RegexLabLogic
             return adressesSB.ToString();
         }
 
-		//ipv6
+        // Возвращает строку, содержащую IPv6 адреса в десятичном формате из оригинальной строки,
+        // разделённые указанным разделителем
+        public static string GetIPv6Adresses(this string str, string separator = "; ")
+        {
+            // Регулярное выражение для IPv6
+            string adressPatern = @"\b((?:[a-f0-9]{1,4}:){7}[a-f0-9]{1,4}\b|\b((?:[a-f0-9]{1,4}(?::[a-f0-9]{1,4})*)?)::((?:[a-f0-9]{1,4}(?::[a-f0-9]{1,4})*)?))\b";
+
+            StringBuilder adressesSB = new();
+
+            var adresses = Regex.Matches(str, adressPatern, RegexOptions.IgnoreCase).ToArray();
+            foreach (var adress in adresses)
+                adressesSB.Append(adress.Value + separator);
+
+            return adressesSB.ToString();
+        }
     }
 }
