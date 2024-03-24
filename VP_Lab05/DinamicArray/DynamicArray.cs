@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 
-namespace DinamicArrayNS
+namespace DynamicArrayNS
 {
-	public class DinamicArray<T> : IEnumerable<T>
+	public class DynamicArray<T> : IEnumerable<T>
 	{
 		///*  СВОЙСТВА  */// 
 		
@@ -13,11 +13,11 @@ namespace DinamicArrayNS
 		public int Count { get; private set; }
 
 		// Ёмкость массива
-		public uint Capacity { get; private set; }
+		public int Capacity { get => _elements.Length; }
 
 		// Шаг увеличения ёмкости
-		private uint _capacityStep;
-		public uint CapacityStep
+		private int _capacityStep;
+		public int CapacityStep
 		{
 			get
 			{
@@ -34,16 +34,9 @@ namespace DinamicArrayNS
 
 		///*  КОНСТРУКТОРЫ  */// 
 
-		//public DinamicArray()
-		//{
-		//    Capacity = 20;
-		//    _elements = new T[Capacity];
-		//}
-
-		public DinamicArray(uint capacity = 20)
+		public DynamicArray(uint capacity = 20)
 		{
-			this.Capacity = capacity;
-			_elements = new T[Capacity];
+			_elements = new T[capacity];
 		}
 
 		///*  МЕТОДЫ  */// 
@@ -61,11 +54,11 @@ namespace DinamicArrayNS
 		public void Add(IEnumerable<T> elements)
 		{
 			if (Count + elements.Count() >= Capacity)
-				IncreaseCapacity(Convert.ToUInt32(elements.Count()));
+				IncreaseCapacity(elements.Count());
 
 			for (int i = 0; i < elements.Count(); i++)
 				_elements[Count+i] = elements.ElementAt(i);
-
+			
 			Count += elements.Count();
 		}
 
@@ -96,14 +89,13 @@ namespace DinamicArrayNS
 		}
 
 		// Увеличение ёмкости на n элементов
-		public void IncreaseCapacity(uint n)
+		public void IncreaseCapacity(int n)
 		{
 			if (n == 0) return;
 
-			Capacity += n;
-			T[] newElements = new T[Capacity];
+			T[] newElements = new T[Capacity + n];
 
-			for (uint i = 0; i < Count; i++)
+			for (int i = 0; i < Count; i++)
 				newElements[i] = _elements[i];
 
 			_elements = newElements;
@@ -115,5 +107,21 @@ namespace DinamicArrayNS
 		}
 
 		IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
+
+		public int IndexOf(T value, int startPosition, int endPosition)
+		{
+            if (startPosition < 0 || startPosition >= endPosition)
+                throw new Exception("Invalid start position!");
+
+            if (endPosition <= startPosition || endPosition > Count)
+                throw new Exception("Invalid end position!");
+
+			for (int i = startPosition; i < endPosition; i++)
+				if (_elements[i].Equals(value))
+					return i;
+
+			return -1;
+		}
 	}
 }
+

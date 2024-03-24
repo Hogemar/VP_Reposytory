@@ -1,20 +1,22 @@
-﻿using DinamicArrayNS;
+﻿using DynamicArrayNS;
 
-DinamicArray<int> dinamicArray = [5,7];
+DynamicArray<int> dynamicArray = [5,7];
 
-dinamicArray.Add(42);
-dinamicArray.Add([0, 12]);
-dinamicArray.Insert(-6, 3);
-dinamicArray.RemoveAt(4);
-
+dynamicArray.Add(42);
+dynamicArray.Add([0, 12]);
+dynamicArray.Insert(-6, 3);
+dynamicArray.RemoveAt(4);
 
 Console.WriteLine("Массив:");
-foreach (var item in dinamicArray)
+foreach (var item in dynamicArray)
 {
     Console.Write($"{item.ToString()} ");
 }
-Console.WriteLine($"\n\nСреднее по массиву: {dinamicArray.Average()}\n");
 
-Console.WriteLine($"Ёмкость массива ДО: {dinamicArray.Capacity}");
-dinamicArray.IncreaseCapacity(5);
-Console.WriteLine($"Ёмкость массива ПОСЛЕ: {dinamicArray.Capacity}");
+Console.WriteLine("\nPos of 42: " + dynamicArray.IndexOf(42, 0, dynamicArray.Count));
+
+Console.WriteLine($"\n\nСреднее по массиву: {dynamicArray.Average()}\n");
+
+Console.WriteLine($"Ёмкость массива ДО: {dynamicArray.Capacity}");
+dynamicArray.IncreaseCapacity(5);
+Console.WriteLine($"Ёмкость массива ПОСЛЕ: {dynamicArray.Capacity}");
