@@ -20,7 +20,7 @@
                         dinamicArray.RemoveAt(j+1);
                         dinamicArray.Insert(temp, j);
                     }
-
+            
         }
     }
 }
