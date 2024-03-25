@@ -1,4 +1,0 @@
-C:\Users\User\Desktop\labs\Визуальное программирование\VP_Pract01\ClassHierarchy\obj\Debug\net8.0\ClassesProject.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\User\Desktop\labs\Визуальное программирование\VP_Pract01\ClassHierarchy\obj\Debug\net8.0\ClassesProject.AssemblyInfoInputs.cache
-C:\Users\User\Desktop\labs\Визуальное программирование\VP_Pract01\ClassHierarchy\obj\Debug\net8.0\ClassesProject.AssemblyInfo.cs
-C:\Users\User\Desktop\labs\Визуальное программирование\VP_Pract01\ClassHierarchy\obj\Debug\net8.0\ClassesProject.csproj.CoreCompileInputs.cache

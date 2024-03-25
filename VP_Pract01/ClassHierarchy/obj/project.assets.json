@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Reposytory\\VP_Pract01\\ClassHierarchy\\ClassesProject.csproj",
-      "projectName": "ClassesProject",
-      "projectPath": "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Reposytory\\VP_Pract01\\ClassHierarchy\\ClassesProject.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Reposytory\\VP_Pract01\\ClassHierarchy\\ClassHierarchy.csproj",
+      "projectName": "ClassHierarchy",
+      "projectPath": "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Reposytory\\VP_Pract01\\ClassHierarchy\\ClassHierarchy.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\User\\Desktop\\labs\\Визуальное программирование\\VP_Reposytory\\VP_Pract01\\ClassHierarchy\\obj\\",
       "projectStyle": "PackageReference",
