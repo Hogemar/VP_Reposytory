@@ -9,14 +9,14 @@ Item item4 = new Item(2, "Стерка", "Синяя", 24.13);
 //1 case
 try
 {
-    shop.AddItem(item1);
-    shop.AddItem(item2);
+	shop.AddItem(item1);
+	shop.AddItem(item2);
 
 }
 catch (ExistingItemCodeException ex)
 {
-    throw ex;
-    throw;
+	throw ex;
+	throw;
 }
 
 //2 case
