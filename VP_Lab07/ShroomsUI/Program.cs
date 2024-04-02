@@ -15,7 +15,12 @@ doperEgor.VisitNest(nestDeep);
 Console.WriteLine();
 
 doperSenya.GetDope(10);
-doperSenya.GetDope(5);
+doperSenya.GetDope(4);
+Console.WriteLine();
+
+doperVasya.LeaveNest();
 Console.WriteLine();
 
 doperEgor.GetDope(12);
+
+//кол-во грибов, которые собрал грибник при уходе
