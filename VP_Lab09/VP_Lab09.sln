@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqExtensionsUI", "LinqExt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqExtensionsLogic", "LinqExtensionsLogic\LinqExtensionsLogic.csproj", "{8B22943F-143B-4875-BCA8-AD6A17FFC786}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary", "..\VP_Reposytory\VP_Pract08\ClassLibrary\ClassLibrary.csproj", "{687DF68C-C094-475C-904E-5B29825E70B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary", "..\VP_Pract08\ClassLibrary\ClassLibrary.csproj", "{7615E2DD-70A2-4D3F-A0B1-0F1F2C38E593}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{8B22943F-143B-4875-BCA8-AD6A17FFC786}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B22943F-143B-4875-BCA8-AD6A17FFC786}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B22943F-143B-4875-BCA8-AD6A17FFC786}.Release|Any CPU.Build.0 = Release|Any CPU
-		{687DF68C-C094-475C-904E-5B29825E70B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{687DF68C-C094-475C-904E-5B29825E70B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{687DF68C-C094-475C-904E-5B29825E70B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{687DF68C-C094-475C-904E-5B29825E70B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7615E2DD-70A2-4D3F-A0B1-0F1F2C38E593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7615E2DD-70A2-4D3F-A0B1-0F1F2C38E593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7615E2DD-70A2-4D3F-A0B1-0F1F2C38E593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7615E2DD-70A2-4D3F-A0B1-0F1F2C38E593}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

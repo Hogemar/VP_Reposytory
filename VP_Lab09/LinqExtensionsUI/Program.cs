@@ -27,11 +27,12 @@ foreach (var item in listOfInt)
 	Console.Write(" " + item);
 
 /// Пример на Item
-var listOfItem = new List<Item>();
-
-listOfItem.Add(new Item(1, "Футболка", "Синий", 15000.99, "Модный магазин", new DateOnly(2023, 5, 10)));
-listOfItem.Add(new Item(2, "Джинсы", "Черный", 29.99, "Джинсовый мир", new DateOnly(2022, 4, 22)));
-listOfItem.Add(new Item(4, "Рубашка", "Красный", 24.99, "Модный магазин", new DateOnly(2023, 6, 5)));
+var listOfItem = new List<Item>
+{
+    new Item(1, "Футболка", "Синий", 15000.99, "Модный магазин", new DateOnly(2023, 5, 10)),
+    new Item(2, "Джинсы", "Черный", 29.99, "Джинсовый мир", new DateOnly(2022, 4, 22)),
+    new Item(4, "Рубашка", "Красный", 24.99, "Модный магазин", new DateOnly(2023, 6, 5))
+};
 
 Console.WriteLine("\n\n\t Коллекция товаров\n");
 foreach (var item in listOfItem)
@@ -44,3 +45,7 @@ foreach (var item in listOfItem)
 
 Console.WriteLine("Все товары не раньше 2022 года производства?\n > " + listOfItem.MyAll(item => item.ProductionDate.Year >= 2022));
 
+var dictionaryOfItem = listOfItem.MyToDictionary(item => item.Id);
+Console.WriteLine("\n\t Словарь из коллекции товаров\n");
+foreach (var item in dictionaryOfItem)
+    Console.WriteLine($" Ключ: {item.Key}\t| Значение: {item.Value}");
