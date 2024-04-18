@@ -3,7 +3,6 @@
 
 	public class FileClass
 	{
-        private FileStream? _stream;
         private StreamReader? _reader;
 		private StreamWriter? _writer;
 
@@ -26,13 +25,19 @@
 		{
 			if (isClosed) throw new Exception("Error: cannot read from closed file!");
 
+            _reader.DiscardBufferedData();
+            _reader.BaseStream.Seek(0, SeekOrigin.Begin);
+
 			return _reader.ReadLine();
 		}
 		public string Read(ushort count)
 		{
 			if (isClosed) throw new Exception("Error: cannot read from closed file!");
 
-			var buffer = new char[count];
+            _reader.DiscardBufferedData();
+            _reader.BaseStream.Seek(0, SeekOrigin.Begin);
+
+            var buffer = new char[count];
 
 			if (_reader.Read(buffer, 0, Convert.ToInt32(count)) == 0)
 				return "";
@@ -58,15 +63,16 @@
 			if (isClosed) return;
             _writer.Dispose();
             _reader.Dispose();
-            _stream.Dispose();
 
 			isClosed = true;
 		}
 
         private bool CreateStream(string filePath, bool isNewFile)
         {
+            FileStream stream;
+
             if (isNewFile)
-                _stream = new FileStream
+                stream = new FileStream
                     (
                     filePath,
                     FileMode.Create,
@@ -76,7 +82,7 @@
             else
                 try
                 {
-                    _stream = new FileStream
+                    stream = new FileStream
                         (
                         filePath,
                         FileMode.Open,
@@ -90,8 +96,8 @@
                     return false;
                 }
 
-            _reader = new StreamReader(_stream);
-            _writer = new StreamWriter(_stream);
+            _reader = new StreamReader(stream);
+            _writer = new StreamWriter(stream);
 
             return true;
         }

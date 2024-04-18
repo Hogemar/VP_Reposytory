@@ -5,8 +5,13 @@ string filePath = @"C:\VP10.txt";
 /*  Создание файла и запись*/
 var newFile = FileClass.Create(filePath);
 
-newFile.WriteLine("Идёт медведь по лесу");      // "Идёт медведь по лесу"
-newFile.Write("Видит – машина горит", 5+3+6);   // "Видит – машина"
+newFile.Write("1234", 3);
+Console.WriteLine(newFile.Read(2));
+newFile.Write("543", 3);
+Console.WriteLine(newFile.ReadLine());
+
+//newFile.WriteLine("Идёт медведь по лесу");      // "Идёт медведь по лесу"
+//newFile.Write("Видит – машина горит", 5+3+6);   // "Видит – машина"
 
 newFile.Close();
 
@@ -22,5 +27,5 @@ file.Close();
 
 /* Удаление файла */
 Console.WriteLine("\n> Пожалуйста, нажмите Enter...");
-Console.Read();
+Console.ReadKey();
 File.Delete(filePath);
