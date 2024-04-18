@@ -3,7 +3,6 @@
 
 	public class FileClass : IDisposable
     {
-        private FileStream? _stream;
         private StreamReader? _reader;
 		private StreamWriter? _writer;
         private bool _isDisposed = true;
@@ -53,6 +52,7 @@
             _writer.Write(str.Substring(0, Convert.ToInt32(count)));
             _writer.Flush();
         }
+        public void Close() => Dispose();
         public void Dispose()
         {
             if (_isDisposed) return;
@@ -72,13 +72,6 @@
                 _reader = null;
             }
 
-            //Освобождаем неуправляемые ресурсы
-            if (_stream != null)
-            {
-                _stream.Close();
-                _stream = null;
-            }
-
             //Не отправлять объект в очередь финализации
             GC.SuppressFinalize(this);
 
@@ -88,8 +81,10 @@
 
         private bool CreateStream(string filePath, bool isNewFile)
         {
+            FileStream stream;
+
             if (isNewFile)
-                _stream = new FileStream
+                stream = new FileStream
                     (
                     filePath,
                     FileMode.Create,
@@ -99,7 +94,7 @@
             else
                 try
                 {
-                    _stream = new FileStream
+                    stream = new FileStream
                         (
                         filePath,
                         FileMode.Open,
@@ -113,8 +108,8 @@
                     return false;
                 }
 
-            _reader = new StreamReader(_stream);
-            _writer = new StreamWriter(_stream);
+            _reader = new StreamReader(stream);
+            _writer = new StreamWriter(stream);
 
             return true;
         }
