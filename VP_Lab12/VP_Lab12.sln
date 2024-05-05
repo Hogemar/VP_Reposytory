@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupplyApp", "SupplyApp\SupplyApp.csproj", "{BC096C92-941D-4FDB-9062-511AA6EFA67E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC096C92-941D-4FDB-9062-511AA6EFA67E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC096C92-941D-4FDB-9062-511AA6EFA67E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC096C92-941D-4FDB-9062-511AA6EFA67E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC096C92-941D-4FDB-9062-511AA6EFA67E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6312446B-4975-4ACC-9E70-39C5BFE53DBE}
+	EndGlobalSection
+EndGlobal
