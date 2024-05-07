@@ -1,6 +1,6 @@
 ﻿namespace SupplyApp
 {
-    partial class AddItemForm
+    partial class AddSupplierForm
     {
         /// <summary>
         /// Required designer variable.
@@ -35,11 +35,11 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.txtManufacturer = new System.Windows.Forms.TextBox();
-            this.lblManufacturer = new System.Windows.Forms.Label();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.lblPrice = new System.Windows.Forms.Label();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.lblAddress = new System.Windows.Forms.Label();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.lblPhone = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,9 +73,9 @@
             this.lblId.Location = new System.Drawing.Point(16, 11);
             this.lblId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(62, 16);
+            this.lblId.Size = new System.Drawing.Size(158, 16);
             this.lblId.TabIndex = 2;
-            this.lblId.Text = "Артикул";
+            this.lblId.Text = "Номер идентификации";
             // 
             // txtId
             // 
@@ -105,67 +105,67 @@
             this.lblName.Location = new System.Drawing.Point(16, 73);
             this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(106, 16);
+            this.lblName.Size = new System.Drawing.Size(33, 16);
             this.lblName.TabIndex = 4;
-            this.lblName.Text = "Наименование";
+            this.lblName.Text = "Имя";
             // 
-            // txtManufacturer
+            // txtAddress
             // 
-            this.txtManufacturer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtManufacturer.Location = new System.Drawing.Point(20, 153);
-            this.txtManufacturer.Margin = new System.Windows.Forms.Padding(4);
-            this.txtManufacturer.Name = "txtManufacturer";
-            this.txtManufacturer.Size = new System.Drawing.Size(209, 22);
-            this.txtManufacturer.TabIndex = 7;
-            this.txtManufacturer.Validating += new System.ComponentModel.CancelEventHandler(this.txtManufacturer_Validating);
-            this.txtManufacturer.Validated += new System.EventHandler(this.txtManufacturer_Validated);
+            this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAddress.Location = new System.Drawing.Point(20, 153);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(209, 22);
+            this.txtAddress.TabIndex = 7;
+            this.txtAddress.Validating += new System.ComponentModel.CancelEventHandler(this.txtAddress_Validating);
+            this.txtAddress.Validated += new System.EventHandler(this.txtAddress_Validated);
             // 
-            // lblManufacturer
+            // lblAddress
             // 
-            this.lblManufacturer.AutoSize = true;
-            this.lblManufacturer.Location = new System.Drawing.Point(16, 133);
-            this.lblManufacturer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblManufacturer.Name = "lblManufacturer";
-            this.lblManufacturer.Size = new System.Drawing.Size(111, 16);
-            this.lblManufacturer.TabIndex = 6;
-            this.lblManufacturer.Text = "Производитель";
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPrice.Location = new System.Drawing.Point(20, 210);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(209, 22);
-            this.txtPrice.TabIndex = 9;
-            this.txtPrice.Validating += new System.ComponentModel.CancelEventHandler(this.txtPrice_Validating);
-            this.txtPrice.Validated += new System.EventHandler(this.txtPrice_Validated);
-            // 
-            // lblPrice
-            // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(16, 191);
-            this.lblPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(73, 16);
-            this.lblPrice.TabIndex = 8;
-            this.lblPrice.Text = "Цена, руб.";
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Location = new System.Drawing.Point(16, 133);
+            this.lblAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(47, 16);
+            this.lblAddress.TabIndex = 6;
+            this.lblAddress.Text = "Адрес";
             // 
             // errorProvider
             // 
             this.errorProvider.ContainerControl = this;
             // 
-            // AddItemForm
+            // txtPhone
+            // 
+            this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPhone.Location = new System.Drawing.Point(20, 210);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(209, 22);
+            this.txtPhone.TabIndex = 9;
+            this.txtPhone.Validating += new System.ComponentModel.CancelEventHandler(this.txtPhone_Validating);
+            this.txtPhone.Validated += new System.EventHandler(this.txtPhone_Validated);
+            // 
+            // lblPhone
+            // 
+            this.lblPhone.AutoSize = true;
+            this.lblPhone.Location = new System.Drawing.Point(16, 191);
+            this.lblPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(67, 16);
+            this.lblPhone.TabIndex = 8;
+            this.lblPhone.Text = "Телефон";
+            // 
+            // AddSupplierForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(492, 251);
-            this.Controls.Add(this.txtPrice);
-            this.Controls.Add(this.lblPrice);
-            this.Controls.Add(this.txtManufacturer);
-            this.Controls.Add(this.lblManufacturer);
+            this.Controls.Add(this.txtPhone);
+            this.Controls.Add(this.lblPhone);
+            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.txtId);
@@ -174,9 +174,9 @@
             this.Controls.Add(this.btnAdd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "AddItemForm";
+            this.Name = "AddSupplierForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Добавить товар";
+            this.Text = "Добавить поставщика";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -191,10 +191,10 @@
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox txtManufacturer;
-        private System.Windows.Forms.Label lblManufacturer;
-        private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.Label lblPhone;
     }
 }

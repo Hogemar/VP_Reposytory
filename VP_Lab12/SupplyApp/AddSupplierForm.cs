@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -12,30 +13,30 @@ using System.Windows.Forms;
 namespace SupplyApp
 {
 
-	public partial class AddItemForm : Form
+	public partial class AddSupplierForm : Form
 	{
 		private int _id;
 		private string _name;
-		private string _manufacturer;
-		private decimal _price;
+		private string _address;
+		private string _phone;
 
 
-		public AddItemForm()
+		public AddSupplierForm()
 		{
 			InitializeComponent();
 		}
-		public AddItemForm(Item item)
+		public AddSupplierForm(Supplier supplier)
 		{
 			InitializeComponent();
 
-			this.Text = "Изменить товар";
+			this.Text = "Редактировать поставщика";
 			txtId.ReadOnly = true;
 			btnAdd.Text = "Изменить";
 
-			txtId.Text = item.Id.ToString();
-			txtName.Text = item.Name;
-			txtManufacturer.Text = item.Manufacturer;
-			txtPrice.Text = ((double)item.Price).ToString();
+			txtId.Text = supplier.Id.ToString();
+			txtName.Text = supplier.Name;
+			txtAddress.Text = supplier.Address;
+			txtPhone.Text = supplier.Phone;
 		}
 
 		private void txtId_Validating(object sender, CancelEventArgs e)
@@ -51,6 +52,7 @@ namespace SupplyApp
 				errorProvider.SetError(txtId, "Ошибка!");
 				e.Cancel = true;
 			}
+
 		}
 		private void txtId_Validated(object sender, EventArgs e)
 		{
@@ -60,7 +62,7 @@ namespace SupplyApp
 		private void txtName_Validating(object sender, CancelEventArgs e)
 		{
 			string input = txtName.Text.Trim();
-			if(Regex.IsMatch(input, @"^[А-Яа-яЁё\s\-]+$"))
+			if (Regex.IsMatch(input, @"^[А-Яа-яЁё\s\-]+$"))
 			{
 				errorProvider.SetError(txtName, String.Empty);
 				e.Cancel = false;
@@ -76,50 +78,51 @@ namespace SupplyApp
 			_name = txtName.Text.Trim();
 		}
 
-		private void txtManufacturer_Validating(object sender, CancelEventArgs e)
+		private void txtAddress_Validating(object sender, CancelEventArgs e)
 		{
-			string input = txtManufacturer.Text.Trim();
-			if (Regex.IsMatch(input, @"^[А-Яа-яЁё\s\-]+$"))
+			string input = txtAddress.Text.Trim();
+			if (Regex.IsMatch(input, @"^[А-Яа-яЁё]+(?: [\s-][А-Яа-яЁё]+)*(?:\sул\.\s[А-Яа-яЁё]+(?: [\s-][А-Яа-яЁё]+)*\s\d+)?$"))
 			{
-				errorProvider.SetError(txtManufacturer, String.Empty);
+				errorProvider.SetError(txtAddress, String.Empty);
 				e.Cancel = false;
 			}
 			else
 			{
-				errorProvider.SetError(txtManufacturer, "Ошибка!");
+				errorProvider.SetError(txtAddress, "Ошибка!");
 				e.Cancel = true;
 			}
 		}
-		private void txtManufacturer_Validated(object sender, EventArgs e)
+		private void txtAddress_Validated(object sender, EventArgs e)
 		{
-			_manufacturer = txtManufacturer.Text.Trim();
+			_address = txtAddress.Text.Trim();
+        }
+		
+		private void txtPhone_Validating(object sender, CancelEventArgs e)
+		{
+			string input = txtPhone.Text.Trim();
+        if (Regex.IsMatch(input, @"^\d{5,7}$"))
+        {
+            errorProvider.SetError(txtPhone, String.Empty);
+				e.Cancel = false;
+			}
+			else
+			{
+				errorProvider.SetError(txtPhone, "Ошибка!");
+				e.Cancel = true;
+			}
+		}
+		private void txtPhone_Validated(object sender, EventArgs e)
+		{
+			_phone = txtPhone.Text.Trim();
 		}
 
-		private void txtPrice_Validating(object sender, CancelEventArgs e)
-		{
-			string input = txtPrice.Text.Trim();
-			if (Regex.IsMatch(input, @"^\d+([.,]\d{1,2})?$"))
-			{
-				errorProvider.SetError(txtPrice, String.Empty);
-				e.Cancel = false;
-			}
-			else
-			{
-				errorProvider.SetError(txtPrice, "Ошибка!");
-				e.Cancel = true;
-			}
-		}
-		private void txtPrice_Validated(object sender, EventArgs e)
-		{
-			_price = Convert.ToDecimal(txtPrice.Text.Trim().Replace('.',','));
-		}
 
 		private void btnAdd_Click(object sender, EventArgs e)
 		{
 			DialogResult = ValidateChildren() ? DialogResult.OK : DialogResult.None;
 			if (DialogResult == DialogResult.OK)
 			{
-				AddItem();
+				AddSupplier();
 				this.Close();
 			}
 			else
@@ -134,7 +137,7 @@ namespace SupplyApp
 			this.Close();
 		}
 
-		private void AddItem()
+		private void AddSupplier()
 		{
 			try
 			{
@@ -142,20 +145,20 @@ namespace SupplyApp
 				{
 					if (txtId.ReadOnly)
 					{
-						Item old = db.Item.Find(_id);
-						db.Item.Remove(old);
+						Supplier old = db.Supplier.Find(_id);
+						db.Supplier.Remove(old);
 					}
-					db.Item.Add(new Item
+
+					db.Supplier.Add(new Supplier
 					{
 						Id = _id,
 						Name = _name,
-						Manufacturer = _manufacturer,
-						Price = _price
+						Address = _address,
+						Phone = _phone
 					});
-
 					db.SaveChanges();
 				}
-				if(txtId.ReadOnly)
+				if (txtId.ReadOnly)
 					MessageBox.Show("Данные изменены!", "Обновлено", MessageBoxButtons.OK);
 				else
 					MessageBox.Show("Данные добавлены!", "Добавлено", MessageBoxButtons.OK);
@@ -165,6 +168,7 @@ namespace SupplyApp
 				MessageBox.Show("Ошибка в данных!", "Ошибка", MessageBoxButtons.OK);
 			}
 		}
+
 	}
 
 }
