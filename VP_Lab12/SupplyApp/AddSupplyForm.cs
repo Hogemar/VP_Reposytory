@@ -36,7 +36,7 @@ namespace SupplyApp
 			_supplier = supply.Supplier;
 			_item = supply.Item;
 
-            txtDate.Text = supply.Date.ToShortDateString();
+			txtDate.Text = supply.Date.ToShortDateString();
 			txtDate.ReadOnly = true;
 			txtVolume.Text = supply.Volume.ToString();
 		}
@@ -44,12 +44,12 @@ namespace SupplyApp
 
 		private void AddSupplyForm_Load(object sender, EventArgs e)
 		{
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "itemDataSet.Item". При необходимости она может быть перемещена или удалена.
-            this.itemTableAdapter1.Fill(this.itemDataSet.Item);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "supplierDataSet.Supplier". При необходимости она может быть перемещена или удалена.
-            this.supplierTableAdapter1.Fill(this.supplierDataSet.Supplier);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "supplyDataSet1.Item". При необходимости она может быть перемещена или удалена.
-            this.itemTableAdapter.Fill(this.supplyDataSet1.Item);
+			// TODO: данная строка кода позволяет загрузить данные в таблицу "itemDataSet.Item". При необходимости она может быть перемещена или удалена.
+			this.itemTableAdapter1.Fill(this.itemDataSet.Item);
+			// TODO: данная строка кода позволяет загрузить данные в таблицу "supplierDataSet.Supplier". При необходимости она может быть перемещена или удалена.
+			this.supplierTableAdapter1.Fill(this.supplierDataSet.Supplier);
+			// TODO: данная строка кода позволяет загрузить данные в таблицу "supplyDataSet1.Item". При необходимости она может быть перемещена или удалена.
+			this.itemTableAdapter.Fill(this.supplyDataSet1.Item);
 			// TODO: данная строка кода позволяет загрузить данные в таблицу "supplyDataSet.Supplier". При необходимости она может быть перемещена или удалена.
 			this.supplierTableAdapter.Fill(this.supplyDataSet.Supplier);
 		}
@@ -63,76 +63,75 @@ namespace SupplyApp
 				boxItem.Enabled = false;
 				boxSupplier.Enabled = false;
 			}
+
+			Calendar.MaxDate = Calendar.TodayDate;
 		}
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            DialogResult = ValidateChildren() ? DialogResult.OK : DialogResult.None;
-            if (DialogResult == DialogResult.OK)
-            {
-                AddSupply();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Введите корректные данные!", "Ошибка",
-               MessageBoxButtons.OK);
-            }
-        }
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            DialogResult = DialogResult.None;
-            this.Close();
-        }
-        private void txtPhone_MouseClick(object sender, MouseEventArgs e)
-        {
-            (sender as MaskedTextBox).Select(0, 0);
-        }
+		private void btnAdd_Click(object sender, EventArgs e)
+		{
+			DialogResult = ValidateChildren() ? DialogResult.OK : DialogResult.None;
+			if (DialogResult == DialogResult.OK)
+			{
+				AddSupply();
+				this.Close();
+			}
+			else
+			{
+				MessageBox.Show("Введите корректные данные!", "Ошибка",
+			   MessageBoxButtons.OK);
+			}
+		}
+		private void btnCancel_Click(object sender, EventArgs e)
+		{
+			DialogResult = DialogResult.None;
+			this.Close();
+		}
+		private void txtPhone_MouseClick(object sender, MouseEventArgs e)
+		{
+			(sender as MaskedTextBox).Select(0, 0);
+		}
 
-        private void AddSupply()
-        {
-            try
-            {
-                using (var db = new SupplyModel())
-                {
-                    if (boxSupplier.Enabled == false)
-                    {
-                        Supply old = db.Supply.Find(_supplier, _item, _date);
-                        db.Supply.Remove(old);
-                    }
+		private void AddSupply()
+		{
+			try
+			{
+				using (var db = new SupplyModel())
+				{
+					if (boxSupplier.Enabled == false)
+					{
+						Supply old = db.Supply.Find(_supplier, _item, _date);
+						db.Supply.Remove(old);
+					}
 
-                    db.Supply.Add(new Supply
-                    {
-                        Supplier = _supplier,
-                        Item = _item,
-                        Date = _date,
-                        Volume = _volume
-                    });
-                    db.SaveChanges();
-                }
-                if (boxSupplier.Enabled == false)
-                    MessageBox.Show("Данные изменены!", "Обновлено", MessageBoxButtons.OK);
-                else
-                    MessageBox.Show("Данные добавлены!", "Добавлено", MessageBoxButtons.OK);
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show("Ошибка в данных!", "Ошибка", MessageBoxButtons.OK);
-            }
-        }
+					db.Supply.Add(new Supply
+					{
+						Supplier = _supplier,
+						Item = _item,
+						Date = _date,
+						Volume = _volume
+					});
+					db.SaveChanges();
+				}
+				if (boxSupplier.Enabled == false)
+					MessageBox.Show("Данные изменены!", "Обновлено", MessageBoxButtons.OK);
+				else
+					MessageBox.Show("Данные добавлены!", "Добавлено", MessageBoxButtons.OK);
+			}
+			catch (Exception exc)
+			{
+				MessageBox.Show("Ошибка в данных!", "Ошибка", MessageBoxButtons.OK);
+			}
+		}
 
 
 		private void txtDate_Validating(object sender, CancelEventArgs e)
 		{
-			string input = txtDate.Text.Trim();
-
-				if (Regex.IsMatch(input, @"^(?:(?:19|20)[0-9]{2})-(?:(?:(?:0[13578]|1[02])-(?:0[1-9]|[12][0-9]|3[01]))|(?:(?:0[469]|11)-(?:0[1-9]|[12][0-9]|30))|(?:(?:02)-(?:0[1-9]|1[0-9]|2[0-8]))|(?:(?:(?:19|20)(?:04|08|[2468][048]|[13579][26]))|2000)-02-29)$"))
-				if (Convert.ToDateTime(input) <= DateTime.Today)
-				{
-					errorProvider.SetError(txtDate, String.Empty);
+			if (!String.IsNullOrEmpty(txtDate.Text))
+			{
+				errorProvider.SetError(txtDate, String.Empty);
 					e.Cancel = false;
 					return;
-				}
+			}
 
 			errorProvider.SetError(txtDate, "Ошибка!");
 			e.Cancel = true;
@@ -145,10 +144,10 @@ namespace SupplyApp
 		private void boxSupplier_Validating(object sender, CancelEventArgs e)
 		{
 			string input = boxSupplier.Text.Trim();
-            if (Regex.IsMatch(input, @"^[А-Яа-яЁё\s\-]+$"))
-            {
-                errorProvider.SetError(boxSupplier, String.Empty);
-                e.Cancel = false;
+			if (Regex.IsMatch(input, @"^[А-Яа-яЁё\s\-]+$"))
+			{
+				errorProvider.SetError(boxSupplier, String.Empty);
+				e.Cancel = false;
 			}
 			else
 			{
@@ -162,16 +161,16 @@ namespace SupplyApp
 			using (var db = new SupplyModel())
 			{
 				_supplier = (int) boxSupplier.SelectedValue;
-            }
+			}
 		}
 
 		private void boxItem_Validating(object sender, CancelEventArgs e)
 		{
 			string input = boxItem.Text.Trim();
-            if (Regex.IsMatch(input, @"^[А-Яа-яЁё\s\-]+$"))
-            {
-                errorProvider.SetError(boxItem, String.Empty);
-                e.Cancel = false;
+			if (Regex.IsMatch(input, @"^[А-Яа-яЁё\s\-]+$"))
+			{
+				errorProvider.SetError(boxItem, String.Empty);
+				e.Cancel = false;
 			}
 			else
 			{
@@ -188,9 +187,9 @@ namespace SupplyApp
 		private void txtVolume_Validating(object sender, CancelEventArgs e)
 		{
 			string input = txtVolume.Text.Trim();
-            if (Regex.IsMatch(input, @"^\d+$"))
-            {
-                errorProvider.SetError(txtVolume, String.Empty);
+			if (Regex.IsMatch(input, @"^\d+$"))
+			{
+				errorProvider.SetError(txtVolume, String.Empty);
 				e.Cancel = false;
 			}
 			else
@@ -198,12 +197,16 @@ namespace SupplyApp
 				errorProvider.SetError(txtVolume, "Ошибка!");
 				e.Cancel = true;
 			}
-        }
+		}
 		private void txtVolume_Validated(object sender, EventArgs e)
 		{
 			_volume = Convert.ToInt32(txtVolume.Text.Trim());
 		}
 
-    }
+		private void Calendar_DateSelected(object sender, DateRangeEventArgs e)
+		{
+			txtDate.Text = Calendar.SelectionStart.ToShortDateString();
+		}
+	}
 
 }
