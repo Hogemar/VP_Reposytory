@@ -53,6 +53,7 @@ namespace SupplyApp
             this.txtVolume = new System.Windows.Forms.TextBox();
             this.supplierTableAdapter1 = new SupplyApp.supplierDataSetTableAdapters.SupplierTableAdapter();
             this.itemTableAdapter1 = new SupplyApp.ItemDataSetTableAdapters.ItemTableAdapter();
+            this.Calendar = new System.Windows.Forms.MonthCalendar();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.supplierDataSet)).BeginInit();
@@ -65,7 +66,7 @@ namespace SupplyApp
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Location = new System.Drawing.Point(275, 208);
+            this.btnAdd.Location = new System.Drawing.Point(258, 211);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(100, 28);
@@ -77,7 +78,7 @@ namespace SupplyApp
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(395, 208);
+            this.btnCancel.Location = new System.Drawing.Point(378, 211);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 28);
@@ -102,6 +103,7 @@ namespace SupplyApp
             this.txtDate.Location = new System.Drawing.Point(20, 31);
             this.txtDate.Margin = new System.Windows.Forms.Padding(4);
             this.txtDate.Name = "txtDate";
+            this.txtDate.ReadOnly = true;
             this.txtDate.Size = new System.Drawing.Size(209, 22);
             this.txtDate.TabIndex = 3;
             this.txtDate.Validating += new System.ComponentModel.CancelEventHandler(this.txtDate_Validating);
@@ -227,13 +229,25 @@ namespace SupplyApp
             // 
             this.itemTableAdapter1.ClearBeforeFill = true;
             // 
+            // Calendar
+            // 
+            this.Calendar.Location = new System.Drawing.Point(275, 0);
+            this.Calendar.MaxDate = new System.DateTime(3099, 12, 31, 0, 0, 0, 0);
+            this.Calendar.MaxSelectionCount = 1;
+            this.Calendar.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.Calendar.Name = "Calendar";
+            this.Calendar.ShowTodayCircle = false;
+            this.Calendar.TabIndex = 13;
+            this.Calendar.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.Calendar_DateSelected);
+            // 
             // AddSupplyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(511, 251);
+            this.ClientSize = new System.Drawing.Size(494, 254);
+            this.Controls.Add(this.Calendar);
             this.Controls.Add(this.txtVolume);
             this.Controls.Add(this.boxItem);
             this.Controls.Add(this.boxSupplier);
@@ -286,5 +300,7 @@ namespace SupplyApp
         private ItemDataSet itemDataSet;
         private BindingSource itemBindingSource;
         private ItemDataSetTableAdapters.ItemTableAdapter itemTableAdapter1;
+        private MonthCalendar Calendar;
+        private TextBox textBox1;
     }
 }

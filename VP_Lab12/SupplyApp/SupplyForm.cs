@@ -19,16 +19,6 @@ namespace SupplyApp
 			InitializeComponent();
 		}
 
-		/*
-		public IEnumerable<Item> GetItems()
-		{
-			using (var db = new SupplyModel())
-			{
-				return db.Item.ToList();
-			}
-		}
-		*/
-
 		// Загрузка таблиц
 		private void SetItemGrid()
 		{
@@ -66,31 +56,31 @@ namespace SupplyApp
 		{
 			if (supplyGrid.ColumnCount < 6)
 			{
-                supplyGrid.Columns.Add("colDate", "Дата поставки");
-                supplyGrid.Columns.Add("colSupplier", "Поставщик");
-                supplyGrid.Columns.Add("colItem", "Артикул товара");
+				supplyGrid.Columns.Add("colDate", "Дата поставки");
+				supplyGrid.Columns.Add("colSupplier", "Поставщик");
+				supplyGrid.Columns.Add("colItem", "Артикул товара");
 				supplyGrid.Columns.Add("colName", "Наим. товара");
 				supplyGrid.Columns.Add("colVolume", "Объём");
-                supplyGrid.Columns.Add("colOverall", "Общая стоимость");
-            }
+				supplyGrid.Columns.Add("colOverall", "Общая стоимость");
+			}
 
-            supplyGrid.Rows.Clear();
+			supplyGrid.Rows.Clear();
 
 			using (var db = new SupplyModel())
 				foreach (var supply in
-                    db.Supply.Select(supply => new
-                    {
-                        supply.Date,
-                        SupplierName = supply.Supplier1.Name,
+					db.Supply.Select(supply => new
+					{
+						supply.Date,
+						SupplierName = supply.Supplier1.Name,
 						SupplierId = supply.Supplier,
-                        ItemId = supply.Item1.Id,
-                        ItemName = supply.Item1.Name,
-                        supply.Volume,
-                        Overall = supply.Volume * supply.Item1.Price
-                    }).ToList()
+						ItemId = supply.Item1.Id,
+						ItemName = supply.Item1.Name,
+						supply.Volume,
+						Overall = supply.Volume * supply.Item1.Price
+					}).ToList()
 					)
 					supplyGrid.Rows.Add(supply.Date.ToShortDateString(), new KeyValuePair<int, string>(supply.SupplierId, supply.SupplierName), supply.ItemId, supply.ItemName, supply.Volume, supply.Overall);
-        }
+		}
 		
 		// Supply Form
 		private void SupplyForm_Load(object sender, EventArgs e)
@@ -135,14 +125,14 @@ namespace SupplyApp
 		}
 		private void updateItem_Click(object sender, EventArgs e)
 		{
-            var i = itemGrid.SelectedCells[0].OwningRow.Index;
-            int itemId = (int)itemGrid[0, i].Value;
+			var i = itemGrid.SelectedCells[0].OwningRow.Index;
+			int itemId = (int)itemGrid[0, i].Value;
 
-            using (var db = new SupplyModel())
+			using (var db = new SupplyModel())
 			{
 				Item item = db.Item.Where(x => x.Id == itemId).First();
 
-                AddItemForm update = new AddItemForm(item);
+				AddItemForm update = new AddItemForm(item);
 
 				if (update.ShowDialog(this) == DialogResult.OK)
 				{
@@ -151,8 +141,8 @@ namespace SupplyApp
 			}
 		}
 
-        // Supplier context menu
-        private void refreshSupplier_Click(object sender, EventArgs e)
+		// Supplier context menu
+		private void refreshSupplier_Click(object sender, EventArgs e)
 		{
 			SetSupplierGrid();
 		}
@@ -186,82 +176,82 @@ namespace SupplyApp
 		}
 		private void updateSupplier_Click(object sender, EventArgs e)
 		{
-            var i = supplierGrid.SelectedCells[0].OwningRow.Index;
-            int supplierId = (int)supplierGrid[0, i].Value;
+			var i = supplierGrid.SelectedCells[0].OwningRow.Index;
+			int supplierId = (int)supplierGrid[0, i].Value;
 
-            using (var db = new SupplyModel())
-            {
-                Supplier supplier = db.Supplier.Where(x => x.Id == supplierId).First();
+			using (var db = new SupplyModel())
+			{
+				Supplier supplier = db.Supplier.Where(x => x.Id == supplierId).First();
 
-                AddSupplierForm update = new AddSupplierForm(supplier);
+				AddSupplierForm update = new AddSupplierForm(supplier);
 
-                if (update.ShowDialog(this) == DialogResult.OK)
-                {
-                    SetSupplierGrid();
-                }
-            }
-        }
+				if (update.ShowDialog(this) == DialogResult.OK)
+				{
+					SetSupplierGrid();
+				}
+			}
+		}
 
-        // Supply context menu
-        private void refreshSupply_Click(object sender, EventArgs e)
+		// Supply context menu
+		private void refreshSupply_Click(object sender, EventArgs e)
 		{
 			SetSupplyGrid();
 		}
 		private void addSupply_Click(object sender, EventArgs e)
 		{
-            AddSupplyForm add = new AddSupplyForm();
+			AddSupplyForm add = new AddSupplyForm();
 			if (add.ShowDialog(this) == DialogResult.OK)
 			{
 				SetSupplyGrid();
 			}
-        }
-        private void removeSupply_Click(object sender, EventArgs e)
+		}
+		private void removeSupply_Click(object sender, EventArgs e)
 		{
-            DialogResult result = MessageBox.Show("Вы уверены, что хотите удалить этот элемент ? ",
-                                    "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
-            {
-                if (supplyGrid.SelectedCells.Count > 0)
-                {
-                    var i = supplyGrid.SelectedCells[0].OwningRow.Index;
-                    int supplierId = ((KeyValuePair<int, string>)supplyGrid[1, i].Value).Key;
-                    int itemId = (int)supplyGrid[2, i].Value;
-                    DateTime date = Convert.ToDateTime(supplyGrid[0, i].Value);
+			DialogResult result = MessageBox.Show("Вы уверены, что хотите удалить этот элемент ? ",
+									"Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+			if (result == DialogResult.Yes)
+			{
+				if (supplyGrid.SelectedCells.Count > 0)
+				{
+					var i = supplyGrid.SelectedCells[0].OwningRow.Index;
+					int supplierId = ((KeyValuePair<int, string>)supplyGrid[1, i].Value).Key;
+					int itemId = (int)supplyGrid[2, i].Value;
+					DateTime date = Convert.ToDateTime(supplyGrid[0, i].Value);
 
-                    using (var db = new SupplyModel())
-                    {
-                        Supply supply = db.Supply.Where(x => x.Supplier == supplierId
-                                                        && x.Item == itemId
-                                                        && x.Date == date).First();
-                        db.Supply.Remove(supply);
-                        db.SaveChanges();
-                    }
-                }
-            }
-            SetSupplyGrid();
-        }
-        private void updateSupply_Click(object sender, EventArgs e)
+					using (var db = new SupplyModel())
+					{
+						Supply supply = db.Supply.Where(x => x.Supplier == supplierId
+														&& x.Item == itemId
+														&& x.Date == date).First();
+						db.Supply.Remove(supply);
+						db.SaveChanges();
+					}
+				}
+			}
+			SetSupplyGrid();
+		}
+		private void updateSupply_Click(object sender, EventArgs e)
 		{
-            var i = supplyGrid.SelectedCells[0].OwningRow.Index;
-            int supplierId = ((KeyValuePair<int, string>)supplyGrid[1, i].Value).Key;
-            int itemId = (int)supplyGrid[2, i].Value;
+			var i = supplyGrid.SelectedCells[0].OwningRow.Index;
+			int supplierId = ((KeyValuePair<int, string>)supplyGrid[1, i].Value).Key;
+			int itemId = (int)supplyGrid[2, i].Value;
 			DateTime date = Convert.ToDateTime(supplyGrid[0, i].Value);
 
-            using (var db = new SupplyModel())
-            {
-                Supply supply = db.Supply.Where(x => x.Supplier == supplierId
+			using (var db = new SupplyModel())
+			{
+				Supply supply = db.Supply.Where(x => x.Supplier == supplierId
 												&& x.Item == itemId
 												&& x.Date == date).First();
 
-                AddSupplyForm update = new AddSupplyForm(supply);
+				AddSupplyForm update = new AddSupplyForm(supply);
 
-                if (update.ShowDialog(this) == DialogResult.OK)
-                {
-                    SetSupplyGrid();
-                }
-            }
+				if (update.ShowDialog(this) == DialogResult.OK)
+				{
+					SetSupplyGrid();
+				}
+			}
 
-        }
-    }
+		}
+	}
 
 }

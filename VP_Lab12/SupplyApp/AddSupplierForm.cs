@@ -95,14 +95,14 @@ namespace SupplyApp
 		private void txtAddress_Validated(object sender, EventArgs e)
 		{
 			_address = txtAddress.Text.Trim();
-        }
+		}
 		
 		private void txtPhone_Validating(object sender, CancelEventArgs e)
 		{
 			string input = txtPhone.Text.Trim();
-        if (Regex.IsMatch(input, @"^\d{5,7}$"))
-        {
-            errorProvider.SetError(txtPhone, String.Empty);
+		if (Regex.IsMatch(input, @"^\d{5,7}$"))
+		{
+			errorProvider.SetError(txtPhone, String.Empty);
 				e.Cancel = false;
 			}
 			else
