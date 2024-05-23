@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="App13.MainPage">
+
+	<StackLayout>
+		
+		<Label x:Name="BatteryLabel" Text="Battery Info" />
+
+		<Label x:Name="DeviceInfoLabel" Text="Device Info" />
+
+		<Label x:Name="DisplayInfoLabel" Text="Display Info" />
+
+		<Button Text="Toggle Flashlight" Clicked="OnToggleFlashlightClicked" />
+
+		<Button x:Name="ToggleBlinkButton" Text="Start Flashlight Blink" Clicked="OnToggleBlinkingClicked" />
+
+		<Button Text="Make Screenshot" Clicked="OnMakeScreenshotClicked" />
+
+		<Button Text="Get Random Contact and Dial" Clicked="OnGetRandomContactClicked" />
+
+        <Button Text="Open Camera and Take Photo" Clicked="OnTakePhotoClicked" />
+        <Image x:Name="PhotoImage" />
+        
+    </StackLayout>
+
+</ContentPage>
