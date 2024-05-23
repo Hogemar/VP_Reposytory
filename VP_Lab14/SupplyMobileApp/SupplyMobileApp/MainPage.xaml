@@ -1,0 +1,25 @@
+﻿	<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+				xmlns:local="clr-namespace:SupplyMobileApp"
+				x:Class="SupplyMobileApp.MainPage">
+
+    <NavigationPage Title="Товары">
+        <x:Arguments>
+            <local:ItemTablePage />
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Поставщики">
+        <x:Arguments>
+            <local:SupplierTablePage />
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Поставки">
+        <x:Arguments>
+            <local:SupplyTablePage />
+        </x:Arguments>
+    </NavigationPage>
+
+</TabbedPage>

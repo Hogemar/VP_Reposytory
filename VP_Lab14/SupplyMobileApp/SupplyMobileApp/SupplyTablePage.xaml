@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="SupplyMobileApp.SupplyTablePage"
+			 Title="Поставки">
+	<StackLayout>
+		<ListView x:Name="supplyList"
+				  ItemsSource="{Binding}"
+				  ItemSelected="OnSupplySelected">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<ViewCell.View>
+							<StackLayout Orientation="Horizontal">
+								<Label Text="{Binding SupplierName}" FontSize="Medium" />
+								<Label Text="{Binding ItemName}" FontSize="Medium" />
+								<Label Text="{Binding Date, StringFormat='{0:dd.MM.yyyy}'}" FontSize="Medium" />
+								<Label Text="{Binding Volume}" FontSize="Medium" />
+							</StackLayout>
+						</ViewCell.View>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+		<Button Text="Добавить" Clicked="CreateSupply" />
+	</StackLayout>
+</ContentPage>

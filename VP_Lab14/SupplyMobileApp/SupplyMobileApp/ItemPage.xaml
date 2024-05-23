@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+ xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+ x:Class="SupplyMobileApp.ItemPage" Title="Информация о товаре">
+	<StackLayout>
+		<Label Text="Наименование" />
+		<Entry Text="{Binding Name}" />
+		<Label Text="Производитель" />
+		<Entry Text="{Binding Manufacturer}" />
+		<Label Text="Цена" />
+		<Entry Text="{Binding Price}" />
+		<StackLayout Orientation="Horizontal">
+			<Button Text="Сохранить" Clicked="SaveItem" />
+			<Button Text="Удалить" Clicked="DeleteItem" />
+			<Button Text="Отмена" Clicked="Cancel" />
+		</StackLayout>
+	</StackLayout>
+</ContentPage>

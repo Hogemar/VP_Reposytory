@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="SupplyMobileApp.SupplyPage"
+			 Title="Информация о поставке">
+	<StackLayout>
+		<Label Text="Поставщик" />
+		<Picker x:Name="supplierPicker" />
+		<Label Text="Товар" />
+		<Picker x:Name="itemPicker" />
+		<Label Text="Дата" />
+		<DatePicker x:Name="datePicker" />
+		<Label Text="Объем" />
+		<Entry Text="{Binding Volume}" Keyboard="Numeric" />
+		<StackLayout Orientation="Horizontal">
+			<Button Text="Сохранить" Clicked="SaveSupply" />
+			<Button Text="Удалить" Clicked="DeleteSupply" />
+			<Button Text="Отмена" Clicked="Cancel" />
+		</StackLayout>
+	</StackLayout>
+</ContentPage>
