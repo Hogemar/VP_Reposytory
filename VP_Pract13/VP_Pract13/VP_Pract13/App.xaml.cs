@@ -10,7 +10,7 @@ namespace VP_Pract13
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new SplashPage();
         }
 
         protected override void OnStart()
