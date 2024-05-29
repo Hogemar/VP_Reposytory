@@ -59,7 +59,7 @@ namespace StudentsWebApp.Controllers
         // POST: Students/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Birthdate,Phone")] Student student)
+        public async Task<IActionResult> Create([Bind("Id,Name,Birthdate,Phone,Gender")] Student student)
         {
             if (ModelState.IsValid)
             {
@@ -89,7 +89,7 @@ namespace StudentsWebApp.Controllers
         // POST: Students/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Birthdate,Phone")] Student student)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Birthdate,Phone,Gender")] Student student)
         {
             if (id != student.Id)
             {
