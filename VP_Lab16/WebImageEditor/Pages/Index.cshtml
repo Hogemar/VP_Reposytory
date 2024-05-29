@@ -1,0 +1,90 @@
+﻿@page
+@model IndexModel
+@{
+	ViewData["Title"] = "Графический редактор";
+}
+<div class="text-center">
+	<h2>Выберите файл для загрузки</h2>
+	<form method="post" enctype="multipart/form-data">
+		<input type="file" name="uploads" /><br /><br />
+		<input type="submit" value="Загрузить" />
+	</form>
+	<div id="image-container" style="display: none;">
+		<h3>Загруженное изображение:</h3>
+		<img id="uploaded-image" src="" alt="Uploaded Image" style="max-width: 100%; height: auto;" /><br /><br />
+		<button id="sharpen-button">Увеличение резкости</button>
+		<button id="blur-button">Размытие</button>
+		<button id="edge-button">Усиление края</button>
+		<br /><br />
+		<button id="left-button">Левый паварот</button>
+		<button id="right-button">Правый паварот</button>
+		<br /><br />
+		<button id="save-button">Сохранить изображение</button>
+	</div>
+</div>
+@section Scripts {
+	<script>
+		document.querySelector('form').addEventListener('submit', async function (event) {
+			event.preventDefault();
+			const formData = new FormData(event.target);
+			try {
+				const response = await fetch('/', {
+					method: 'POST',
+					body: formData
+				});
+				const imageUrl = await response.text();
+				if (imageUrl.startsWith("Error:")) {
+					console.error(imageUrl);
+					alert(imageUrl);
+					return;
+				}
+				console.log(`Uploaded image URL: ${imageUrl}`);
+				document.getElementById('uploaded-image').src = imageUrl;
+				document.getElementById('image-container').style.display = 'block';
+			} catch (error) {
+				console.error(`Error during image upload: ${error}`);
+			}
+		});
+
+		document.getElementById('sharpen-button').addEventListener('click', async function () {
+			await applyFilter('sharpen');
+		});
+		document.getElementById('blur-button').addEventListener('click', async function () {
+			await applyFilter('blur');
+		});
+		document.getElementById('edge-button').addEventListener('click', async function () {
+			await applyFilter('edge');
+		});
+		document.getElementById('left-button').addEventListener('click', async function () {
+			await applyFilter('left');
+		}); document.getElementById('right-button').addEventListener('click', async function () {
+			await applyFilter('right');
+		});
+
+		document.getElementById('save-button').addEventListener('click', function () {
+			const link = document.createElement('a');
+			link.href = document.getElementById('uploaded-image').src;
+			link.download = 'modified_image.png';
+			link.click();
+		});
+
+		async function applyFilter(filter) {
+			const imageUrl = document.getElementById('uploaded-image').src;
+			console.log(`Applying filter: ${filter} to image URL: ${imageUrl}`);
+			try {
+				const relativePath = imageUrl.replace(window.location.origin, '');
+				const response = await fetch(`/apply-filter?filter=${filter}&imageUrl=${encodeURIComponent(relativePath)}`);
+				const newImageUrl = await response.text();
+				if (newImageUrl.startsWith("Error:")) {
+					console.error(newImageUrl);
+					alert(newImageUrl);
+					return;
+				}
+				console.log(`Filtered image URL: ${newImageUrl}`);
+				document.getElementById('uploaded-image').src = newImageUrl;
+			} catch (error) {
+				console.error(`Error during filter application: ${error}`);
+			}
+		}
+	</script>
+}
