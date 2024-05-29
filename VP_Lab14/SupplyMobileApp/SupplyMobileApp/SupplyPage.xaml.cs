@@ -86,6 +86,15 @@ namespace SupplyMobileApp
 			supply.Date = datePicker.Date; // Используем выбранную дату
 			supply.Volume = bindingInfo.Volume;
 
+			if(supply.Volume <= 0)
+			{
+                errorLabel.Text = "Volume must be greater than 0";
+                errorLabel.IsVisible = true;
+                return;
+            }
+            else
+                errorLabel.IsVisible = false;
+
 			App.Database.SaveSupply(supply);
 			await Navigation.PopAsync();
 		}

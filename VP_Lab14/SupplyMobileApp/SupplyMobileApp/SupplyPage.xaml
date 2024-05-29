@@ -12,6 +12,7 @@
 		<DatePicker x:Name="datePicker" />
 		<Label Text="Объем" />
 		<Entry Text="{Binding Volume}" Keyboard="Numeric" />
+        <Label x:Name="errorLabel" TextColor="Red" IsVisible="False" />
 		<StackLayout Orientation="Horizontal">
 			<Button Text="Сохранить" Clicked="SaveSupply" />
 			<Button Text="Удалить" Clicked="DeleteSupply" />

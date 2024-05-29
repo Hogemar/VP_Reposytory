@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupplyMobileApp.UWP", "Supp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupplyMobileApp.Android", "SupplyMobileApp\SupplyMobileApp.Android\SupplyMobileApp.Android.csproj", "{E42D8003-BC34-4984-A422-6DBB8516247E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupplyMobileApp", "SupplyMobileApp\SupplyMobileApp\SupplyMobileApp.csproj", "{9D86A93C-10F5-46F6-8238-1044D170A600}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SupplyMobileApp", "SupplyMobileApp\SupplyMobileApp\SupplyMobileApp.csproj", "{9D86A93C-10F5-46F6-8238-1044D170A600}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
